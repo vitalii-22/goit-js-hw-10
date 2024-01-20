@@ -6,6 +6,70 @@
 */
 @import url('./reset.css');
 @import url('./vite-promo.css');
+@import url('flatpickr/dist/flatpickr.min.css');
+
+body {
+  padding-top: 36px;
+  padding-left: 156px;
+}
+
+a {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.timer {
+  display: flex;
+  gap: 27px;
+  width: 346px;
+  height: 72px;
+}
+
+input {
+  box-sizing: border-box;
+  padding: 8px 16px;
+  border-radius: 4px;
+  border: 1px solid #808080;
+  margin-bottom: 32px;
+  margin-right: 8px;
+  width: 272px;
+  height: 40px;
+  color: #2e2f42;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0.64px;
+}
+
+button {
+  color: #989898;
+
+  font-family: Montserrat;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+  width: 75px;
+  height: 40px;
+  border-radius: 8px;
+  padding: 8px 16px;
+}
+
+.value {
+  /* display: block; */
+  width: 56px;
+  height: 48px;
+  color: #2e2f42;
+  font-family: Montserrat;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 48px; /* 120% */
+  letter-spacing: 1.6px;
+}
+
 :root {
   font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
   font-size: 16px;
