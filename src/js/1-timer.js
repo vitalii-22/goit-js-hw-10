@@ -20,25 +20,13 @@ const options = {
     const date = new Date();
     if (date > selectedDates[0]) {
       iziToast.show({
-        title: 'Error',
-        titleColor: '#FFF',
-        titleSize: '16px',
-        titleLineHeight: '24px',
-
         message: 'Please choose a date in the future',
         color: '#EF4040',
-        iconUrl: './img/javascript.svg#icon-bi_x-octagon',
-        iconColor: '#FFF',
         position: 'topRight',
         messageSize: '16px',
         messageColor: '#FFF',
         messageLineHeight: '24px',
       });
-
-      // iziToast.warning({
-      //   title: 'Caution',
-      //   message: 'You forgot important data',
-      // });
 
       button.disabled = true;
     } else {
