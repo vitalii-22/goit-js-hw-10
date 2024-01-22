@@ -13,7 +13,8 @@ form.addEventListener('input', event => {
 
 form.addEventListener('submit', event => {
   event.preventDefault();
-  const promise = () => {
+  input.value = '';
+  const promise = time => {
     return new Promise((resolve, reject) => {
       setTimeout(() => {
         if (state === 'fulfilled') {
@@ -28,8 +29,8 @@ form.addEventListener('submit', event => {
   promise(formTime)
     .then(value => {
       iziToast.show({
-        message: 'Please choose a date in the future',
-        color: '#EF4040',
+        message: `✅ OK Fulfilled promise in ${formTime}ms`,
+        color: '#59A10D',
         position: 'topRight',
         messageSize: '16px',
         messageColor: '#FFF',
@@ -37,7 +38,14 @@ form.addEventListener('submit', event => {
       });
     })
     .catch(error => {
-      console.log(error);
+      iziToast.show({
+        message: `❌ Error Rejected promise in ${formTime}ms`,
+        color: '#EF4040',
+        position: 'topRight',
+        messageSize: '16px',
+        messageColor: '#FFF',
+        messageLineHeight: '24px',
+      });
     });
 });
 
